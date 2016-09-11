@@ -13,7 +13,25 @@ controller.getJson = function(req, res) {
 	fs.readFile('public/services.json', function(err, content) {
 		var data = JSON.parse(content);	
 
-		console.log(data.items.length);
+		var obj = {};
+		data.items.forEach(function(item) {
+			var pers = (obj[item.full_name] = (obj[item.full_name] || {fullName: item.full_name}) );
+			pers[item.status_name] = pers[item.status_name] ? pers[item.status_name] + 1 : 1;
+		});
+ 
+		res.json(obj);
+	});
+
+};
+
+controller.getJsonEng = function(req, res) {
+	var html = req.body.html;
+
+	res.header('content-type', 'application/json; charset=utf-8');
+
+	fs.readFile('public/services_eng.json', function(err, content) {
+		var data = JSON.parse(content);	
+
 		var obj = {};
 		data.items.forEach(function(item) {
 			var pers = (obj[item.full_name] = (obj[item.full_name] || {fullName: item.full_name}) );

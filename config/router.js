@@ -26,6 +26,13 @@ router.init = function(appScope) {
 
 	route({
 		method: 'get',
+		path: '/services_eng.json',
+		controller: 'fileProvier',
+		fn: 'getJsonEng'
+	});
+
+	route({
+		method: 'get',
 		path: '/',
 		controller: 'fileProvier',
 		fn: 'index'

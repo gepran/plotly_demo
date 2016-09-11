@@ -41,14 +41,11 @@ function drawChart2() {
 			y3.push(data[name]['მიმდინარე'] || 0);
 		}
 
-		console.log(x1);
-		console.log(y1);
-		console.log(y2);
-
 		var trace1 = {
 		  x: x1,
 		  y: y1,
 		  type: 'bar',
+		  name: 'ახალი',
 		  marker: {
 			color: 'pink'
 		  }
@@ -59,6 +56,7 @@ function drawChart2() {
 		  x: x1,
 		  y: y2,
 		  type: "bar",
+		  name: 'მიმდინარე',
 		  marker: {
 			color: 'lightblue'
 		  }
@@ -68,14 +66,12 @@ function drawChart2() {
 		  x: x1,
 		  y: y3,
 		  type: "bar",
+		  name: 'დასრულებული',
 		  marker: {
 			color: 'red'
 		  }
 		};
 
-		//var data = [trace1, trace2];
-		//var layout = {barmode: "stack"};
-		//Plotly.newPlot("chart2", data, layout);
 		var div = createDiv({
 			id: 'chart2',
 			style: 'height: 800px; width: 100%;'
@@ -89,6 +85,8 @@ function drawChart2() {
 function init() {
 	drawChart1();
 	drawChart2();
+	drawChart3();
+	drawChart4();
 }
 
 window.onload = init;
