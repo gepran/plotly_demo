@@ -1,0 +1,28 @@
+{
+  "name": "htmltopdf",
+  "version": "1.0.0",
+  "description": "Service that converts HTML into PDF",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giobero/htmltopdf.git"
+  },
+  "keywords": [
+    "htmltopdf",
+    "converter"
+  ],
+  "author": "Giorgi Beridze",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/giobero/htmltopdf/issues"
+  },
+  "homepage": "https://github.com/giobero/htmltopdf#readme",
+  "dependencies": {
+	  "express": "4.14.0",
+	  "body-parser": "1.15.2",
+	  "bunyan": "1.8.1"
+  }
+}
