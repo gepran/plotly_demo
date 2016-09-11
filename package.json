@@ -1,5 +1,5 @@
 {
-  "name": "htmltopdf",
+  "name": "plotly_demo",
   "version": "1.0.0",
   "description": "Public Web Content Server + Plotly.js Examples",
   "main": "app.js",
